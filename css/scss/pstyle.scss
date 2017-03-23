@@ -1,0 +1,40 @@
+@import "vendor/normalize";
+
+@import "partials/variables";
+
+@import "modules/course-header";
+@import "modules/footer";
+@import "modules/mcq";
+
+html, body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: $BodyFont;
+
+    font-weight: 100;
+    background-color: $SA05Gray;
+}
+
+.container-content {
+    min-height: 100%;
+    position: relative;
+    top: 7vh; //height of header
+    padding-bottom: 10vh; //height of footer
+    width: 60vw;
+    margin: auto;
+    background-color: white;
+    padding: 5vw;
+    font-size: $BodyFontSize;
+}
+
+#copyright {
+    font-size:0.5em; 
+    font-family: $BodyFont;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding-right: 1vw; 
+    padding-bottom: 0.5vw;
+}

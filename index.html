@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Prototype multiple-choice activity for Presentation Skills course for platform-neutral development.">
+    
+    <title>Presentation skills - Multiple-choice activity</title>
+    
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script type = "text/javascript" language = "javascript">
+         $(document).ready(function() {
+//             $("#menu").load("requires/drawer-menu-course.html");
+//             $("#headbanner").load("requires/course-header.html");
+//             $("#thumbs").load("requires/course-contents.html");
+//             $("#footer").load("requires/footer.html");
+//             $("#u3-v1").load("modules/v1.html");
+//             $().load("../requires/js/drawer-menu-scripts.html");
+//             $('.drawer').drawer();
+         });
+    </script>
+    <link rel="stylesheet" type="text/css" href="css/pstyle.css">
+</head>
+<body>
+<!-- all content on the page itself is inside this div -->
+    <header id="headbanner" class="header-content"></header>
+    <div id="content" class="container-content"> 
+
+        <div id="u3-objectives" class="module-hero"></div>
+        <div id="u3-v1" class="module-square"></div>
+        <div id="u3-mcq1"></div>
+
+        <div class="question-mc">
+            <ul id="ul-questions" class="question-block">
+                <!-- content here injected by js/mcquestions.js -->
+            </ul>
+        </div>
+        
+        <button id="shufflemc">Start again</button>
+
+        <button id="back">&lt;</button>
+        <button id="next">&gt;</button>
+                    <button id="check">Check</button>
+        <footer id="footer" class="footer">
+        </footer>
+
+
+    </div>
+    <script src="js/mcquestions.js"></script>
+    
+</body> 
+</html>

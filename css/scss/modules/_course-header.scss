@@ -1,0 +1,29 @@
+// This contains styles for the <header>
+
+.header-content {
+    //VARIABLES - EDIT IN _variables.scss NOT HERE!
+    background-color: white;
+//    box-shadow: $BoxShadow-4dp;
+    
+    //CONSTANTS - Edit these below
+    height: 10vh;
+    z-index: 1; //make header float above page content
+    position: fixed; //so content scrolls under it
+    top: 1vh;
+    left: 15vw;
+    width: 70vw;
+    margin: auto;
+    
+    .course-header-title {
+        //VARIABLES - EDIT IN _variables.scss NOT HERE!
+        font-family: $TitleFont;
+        color: $SALightBlue;
+    
+        //CONSTANTS - Edit these below
+        margin: 2.6vh 0 0 0;
+        padding: 0;
+        font-size: 4em;
+        font-style: normal;
+        font-weight:100;
+    }
+}

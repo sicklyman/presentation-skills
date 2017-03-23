@@ -1,0 +1,113 @@
+//This styles the unit list as a grid with either three, two, or one 
+//unit image and title div across the page depending on the viewport size.
+
+//JAG note - I still feel the code below can be improved as it's too 
+//repetitive. I can't see another way to deal with the fact that SASS does
+//not allow variables to be set inside media breakpoints. 19 JAN 2017
+
+//Variables for use only here
+    //g = grid, w = width, h = height
+    $gw3: 29vw;
+    $gh3: $gw3*0.65;
+    $gw2: 39vw;
+    $gh2: $gw2*0.65;
+    $gw1: 80vw;
+    $gh1: $gw1*0.65;
+    
+    //bp = breakpoint
+    $g3bp: "(min-width: 930px)";
+    $g2bp: "(min-width: 401px) and (max-width: 929px)";
+    $g1bp: "(max-width: 400px)";
+
+//set styles that are constant no matter the viewport width
+
+//push course units down so they aren't under header
+.course-units {
+    padding-top: 12vh;
+    align-content: center;
+    margin: auto;
+}
+
+//remove bullets from unit thumbnail unordered list
+.no-bullets {
+    list-style-type: none;
+}
+
+.li-img-title {
+    float: left;
+}
+
+//remove the float property above so that the footer
+//is below and not to the right of the unit thumbs
+.clear {
+    clear: left;
+}
+
+.li-unit-title {
+    position: relative;
+    margin-top: -19%;
+
+    box-shadow: $BoxShadow-2dp;
+    background-color: $SAPurple;
+
+    font-family: $TitleFont;
+    text-decoration: none;
+    color: white;
+}
+
+//Now set styles for 1st breakpoint for larger tablets and computers
+@media #{$g3bp} {
+    .li-img-title {
+        width: $gw3;
+        height: $gh3;
+        margin: $gw3*0.05 $gw3*0.1 $gw3*0.1 0px;
+    }
+
+    .li-unit-img .unit-img {
+        width: $gw3;
+        height: $gh3;
+    }
+
+    .li-unit-title {
+        font-size: $gh3/4;
+        padding-left: $gw3*0.02;
+    }
+}
+
+//set styles for 2nd breakpoint for larger mobiles and tablets
+@media #{$g2bp} {
+    .li-img-title {
+        width: $gw2;
+        height: $gh2;
+        margin: $gw2*0.05 $gw2*0.1 $gw2*0.1 0px;
+    }
+
+    .li-unit-img .unit-img{
+        width: $gw2;
+        height: $gh2;
+    }
+
+    .li-unit-title {
+        font-size: $gh2/4;
+        padding-left: $gw2*0.02;
+    }
+}
+
+//set styles for 3rd breakpoint for smaller mobiles
+@media #{$g1bp} {
+    .li-img-title {
+        width: $gw1;
+        height: $gh1;
+        margin: $gw1*0.05 $gw1*0.1 $gw1*0.1 0px;
+    }
+
+    .li-unit-img .unit-img{
+        width: $gw1;
+        height: $gh1;
+    }
+
+    .li-unit-title {
+        font-size: $gh1/4;
+        padding-left: $gw1*0.02;
+    }
+}
